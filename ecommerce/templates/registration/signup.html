@@ -1,0 +1,12 @@
+{% extends "store/main.html" %}
+{%load crispy_forms_tags %}
+{%block content%}
+<h5><center>Signup</center></h5>
+<form action="" method="POST">
+    {%csrf_token%}
+    Name<input required class="form-control" type="text" name="name" placeholder="Name.."><br>
+    Email<input required class="form-control" type="email" name="email" placeholder="Email..">
+    {{form|crispy}}
+    <center><input type="submit" class="btn btn-success"  value="signup"></center>
+</form>
+{%endblock%}

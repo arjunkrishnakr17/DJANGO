@@ -1,0 +1,37 @@
+{% load static%}
+<center>
+<h1>SIGN-UP</h1>
+<br>
+<br>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1" />
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
+
+<form method="POST">
+    {% csrf_token %}
+    <div class="row">
+        <div class="container">
+            <div class="form-field">
+                <input required class="form-control" type="text" name="name" placeholder="Name..">
+            </div> 
+        </div> 
+    </div>   
+    <div class="row"> 
+        <div class="container">       
+            <div class="form-field">
+                <input required class="form-control" type="email" name="email" placeholder="email..">
+            </div>
+        </div> 
+    </div> 
+    <div class="row"> 
+        <div class="container">       
+            <div class="form-field">
+                <input required class="form-control" type="password" name="password" placeholder="password..">
+            </div>
+        </div> 
+    </div> 
+    <div class="row"> 
+        <div class="container"> 
+            <div class="col-lg-6">
+        <input id="form-button" class="btn btn-success btn-block" type="submit" value="Login">
+</form>
